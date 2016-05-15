@@ -1,23 +1,27 @@
 @import forms.FruitsForms
-@(message: String, form: Form[FruitsForms])
+@(form: Form[FruitsForms])
 
 @main("Welcome to the Fruit Shop") {
-    <h1>Fruit Shop</h1>
 
-    @helper.form(action = routes.FruitShopController.addFruit()) {
-        <label> Apples,  £0.60 each
-            <input type="number" name="apples" placeholder="0" min="0" max="30">
-        </label>
+    @helper.form(action = routes.FruitShopController.addFruit(), 'class -> "form-horizontal") {
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="apples"> Apples,  £0.60 each</label>
+            <div class="col-sm-1">
+                <input type="number" class="form-control" id="apples" name="apples" placeholder="0" min="0" max="30">
+            </div>
+        </div>
 
-        <br>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="apples">Oranges,  £0.25 each</label>
+            <div class="col-sm-1">
+                <input type="number" class="form-control" id="oranges" name="oranges" placeholder="0" min="0" max="30">
+            </div>
+        </div>
 
-        <label> Oranges,  £0.25 each
-            <input type="number" name="oranges" placeholder="0" min="0" max="30">
-        </label>
-
-        <input type="submit" name="Checkout">
-
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-success">Checkout</button>
+            </div>
+        </div>
     }
-
-
 }

@@ -13,7 +13,7 @@ trait FruitShopController extends Controller {
   val orange = Fruit("orange", 0.25)
 
   def index = Action {
-    Ok(views.html.index("Your new application is ready.", fruitsForm))
+    Ok(views.html.index(fruitsForm))
   }
 
   def addFruit = Action { implicit request =>
