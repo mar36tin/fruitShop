@@ -1,4 +1,4 @@
-Fruit shop - Play framework app
+#Fruit shop - Play framework app
 
 The application calculates the total price of apples and oranges.
 
