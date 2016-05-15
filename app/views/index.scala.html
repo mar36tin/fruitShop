@@ -1,0 +1,23 @@
+@import forms.FruitsForms
+@(message: String, form: Form[FruitsForms])
+
+@main("Welcome to the Fruit Shop") {
+    <h1>Fruit Shop</h1>
+
+    @helper.form(action = routes.FruitShopController.addFruit()) {
+        <label> Apples,  £0.60 each
+            <input type="number" name="apples" placeholder="0" min="0" max="30">
+        </label>
+
+        <br>
+
+        <label> Oranges,  £0.25 each
+            <input type="number" name="oranges" placeholder="0" min="0" max="30">
+        </label>
+
+        <input type="submit" name="Checkout">
+
+    }
+
+
+}
