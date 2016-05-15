@@ -2,7 +2,12 @@
 @(form: Form[FruitsForms])
 
 @main("Welcome to the Fruit Shop") {
-
+    <div class="alert alert-danger">
+        <strong>Offers!</strong> Buy one, get one free on apples.
+    </div>
+    <div class="alert alert-danger">
+        <strong>Offers!</strong> 3 for the price of 2 on oranges.
+    </div>
     @helper.form(action = routes.FruitShopController.addFruit(), 'class -> "form-horizontal") {
         <div class="form-group">
             <label class="control-label col-sm-2" for="apples"> Apples,  £0.60 each</label>
